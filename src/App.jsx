@@ -89,6 +89,7 @@ export const App = () => {
                     }
 
                   </td> */}
+                  
                   <td>
                     <button
                       onClick={() =>
@@ -101,21 +102,27 @@ export const App = () => {
                 </tr>
               );
             })}
-          <tr >
-            <input 
-              onChange={(e) => setName(e.target.value)}
-              type='text'
-              placeholder='write name'
-            />
-            <button
-              onClick={() =>
-                dispatch({ type: 'create', payload: { title: name } })
-              }
-            >
-              save
-            </button>
+          <tr>
+
+            <th>Enter your Name</th>
+            <td>
+              {' '}
+              <input
+                onChange={(e) => setName(e.target.value)}
+                type='text'
+                placeholder='write name'
+              />
+            </td>
+            <td>
+              <button
+                onClick={() =>
+                  dispatch({ type: 'create', payload: { title: name } })
+                }
+              >
+                save
+              </button>
+            </td>
           </tr>
-          
         </tbody>
       </table>
     </div>
